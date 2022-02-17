@@ -1,0 +1,27 @@
+{
+  "name": "com.meryel.code-analysis-3-11",
+  "version": "1.0.0",
+  "displayName": "Code Analysis 3.11",
+  "description": "Roslyn binaries v3.11 (C# 9.0) for Unity 2021.2 or newer",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": ""
+  },
+  "samples": [
+    {
+      "displayName": "Sample Codes",
+      "description": "class SemanticAnalysisSample : MonoBehaviour ",
+      "path": "Samples~/Sample"
+    }
+  ],
+  "author": {
+    "name": "Meryel",
+    "email": "merryyellow@outlook.com",
+    "url": "meryel.netlify.app"
+  },
+  "repository": {
+    "type": "",
+    "url": "https://github.com/merryyellow/code-analysis-3-11.git"
+  },
+  "hideInEditor": false
+}
