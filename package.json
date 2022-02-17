@@ -9,8 +9,8 @@
   },
   "samples": [
     {
-      "displayName": "Sample Codes",
-      "description": "class SemanticAnalysisSample : MonoBehaviour ",
+      "displayName": "Sample Code",
+      "description": "Sample code to test Roslyn functionality",
       "path": "Samples~/Sample"
     }
   ],
