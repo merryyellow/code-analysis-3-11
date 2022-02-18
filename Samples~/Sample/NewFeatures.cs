@@ -20,35 +20,26 @@ public class NewFeatures : MonoBehaviour
  
 namespace TopLevel
 {
-    public class Program
+    public record Person
     {
-        string str;
-
-        public string GetName()
-        {
-            if (str is not null)
-                return str;
-            return "";
-        }
-	}
+        public string FirstName { get; init; } = default!;
+        public string LastName { get; init; } = default!;
+    };
 }");
 
         var root = (CompilationUnitSyntax)tree.GetRoot();
 
-        var visitor = new NotPatternVisitor();
+        var visitor = new RecordVisitor();
         visitor.Visit(root);
     }
 }
 
-class NotPatternVisitor : CSharpSyntaxWalker
+class RecordVisitor : CSharpSyntaxWalker
 {
-    public override void VisitUnaryPattern(UnaryPatternSyntax node)
+    public override void VisitRecordDeclaration(RecordDeclarationSyntax node)
     {
-        base.VisitUnaryPattern(node);
+        base.VisitRecordDeclaration(node);
 
-        if (node.OperatorToken.ValueText == "not")
-        {
-            Debug.Log("not pattern");
-        }
+        Debug.Log(node.Identifier.ValueText);
     }
 }
